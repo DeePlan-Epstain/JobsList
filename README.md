@@ -1,5 +1,5 @@
 # JobsList
-
+Node 18.17.1
 ## Summary
 
 Short summary on functionality and used technologies.
