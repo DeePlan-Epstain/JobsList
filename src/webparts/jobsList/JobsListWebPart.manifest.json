@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "d3318156-d693-4874-bf68-641bf6dcc132",
+  "alias": "JobsListWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": [
+    "SharePointWebPart",
+    "TeamsPersonalApp",
+    "TeamsTab",
+    "SharePointFullPage"
+  ],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Advanced"
+      },
+      "title": {
+        "default": "JobsList"
+      },
+      "description": {
+        "default": "JobsList description"
+      },
+      "officeFabricIconFontName": "ClipboardListReply",
+      "properties": {
+        "description": "JobsList",
+        "JobListId": "122e8a5d-774b-4b0e-afbb-1f6465b3862a",
+        "JobsApplicationsListId": "7d3125f8-78f3-4c49-b074-eb857c5c78b3",
+        "Title": "רשימת משרות",
+        "pageItemsNumber": 10
+      }
+    }
+  ],
+  "supportsFullBleed": true
+}

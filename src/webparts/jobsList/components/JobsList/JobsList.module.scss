@@ -1,0 +1,199 @@
+// @font-face {
+//     font-family: Rubik;
+//     src: url(../../fonts/Rubik-Regular.ttf);
+// }
+
+body {
+    font-family: "Rubik", sans-serif !important;
+}
+
+.jobsListContainer {
+    direction: rtl;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    background-color: white;
+
+    .jobItem {
+        width: 50%;
+        border-radius: 20px;
+        background: #fcfcfc;
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
+        min-height: 250px;
+        overflow: hidden;
+        transition: min-height 0.3s ease-out;
+        // max-height: 500px;
+
+        .details {
+            padding: 1em 2em 0em 2em;
+            display: grid;
+            grid-template-areas: 'Rheader Lheader '
+                'Rheader Lfooter';
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .BtsAndTextContainer {
+
+            padding: 1em 2em 1em 2em;
+
+            .switchBts {
+                display: flex;
+                text-wrap: nowrap;
+                gap: 1em;
+                padding-bottom: 1em;
+            }
+        }
+
+        p {
+            text-wrap: nowrap;
+        }
+    }
+
+    .LineContainer {
+        display: flex;
+        align-items: center;
+        gap: 5%
+    }
+
+    .Tags {
+        border-radius: 15px;
+        padding: 1em;
+        background-color: #eeeeee;
+        width: fit-content;
+        text-wrap: nowrap;
+    }
+
+
+    .readMore {
+        color: #007da9;
+        text-decoration: underline;
+        cursor: pointer;
+        background: none;
+        margin-top: 1rem; // Give some space above the Read More link
+    }
+
+    .readMore:hover {
+        color: #00506d;
+    }
+
+    .expanded {
+        height: auto;
+
+        .ellipsisContainer {
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            /* Number of lines you want to display */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            max-height: 250px;
+            line-height: 20px;
+            width: 100%;
+        }
+    }
+
+}
+
+.ModalContainer {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-height: 30rem;
+    overflow-y: scroll;
+    align-items: center;
+
+
+    .ModalRow {
+        padding-right: 1em;
+        background-color: white;
+        width: 90%;
+    }
+}
+
+.FormTitle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    position: relative;
+
+    /* Added for positioning context */
+    >h4 {
+        color: black;
+        padding: 3%;
+    }
+
+    > :last-child {
+        /* Icon aligned to the right */
+        position: absolute;
+        /* Position it absolutely relative to its parent */
+        left: 15px;
+        /* Spacing from the right edge */
+        top: 50%;
+        /* Align vertically */
+        transform: translateY(-50%);
+        /* Center vertically */
+    }
+}
+
+/* Upload file styling*/
+.UploadFileBtn {
+    text-transform: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
+    width: 12em !important;
+    border-radius: 20px !important;
+    width: 48px;
+}
+
+.FileName {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.PeoplePicker {
+
+    :nth-child(1) {
+
+        border-color: darkgrey;
+        border-radius: 4px;
+
+        :nth-child(1) {
+
+            // Styling for the ::after pseudo-element of the first child
+            &::after {
+                color: #000000;
+                // Use !important if absolutely necessary
+            }
+
+            // Hover styles for the first child
+            &:hover {
+                border-color: #424242;
+            }
+        }
+
+    }
+
+    :nth-child(1):hover {
+        border-color: #424242 !important;
+    }
+
+    :nth-child(1):after {
+        border-color: #1976d2 !important;
+    }
+}
+
+// #selected-items-id__33 {
+//     :nth-child(1) {
+
+//         background: red !important;
+//     }
+// }
